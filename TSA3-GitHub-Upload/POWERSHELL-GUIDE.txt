@@ -1,0 +1,86 @@
+TSA3 SCREENSHOTS AND POWERSHELL GUIDE
+
+Project:
+C:\Users\inah\Documents\ChatGPT\Solar US\tasks-today-tsa3
+
+Repository name:
+it0049-tsa3-tasks-for-today-laravel
+
+GitHub manual-upload folder:
+C:\Users\inah\Documents\ChatGPT\Solar US\TSA3-GitHub-Upload
+
+The activity does not specify a screenshot count. The following are
+recommended evidence for its requirements. Use screenshots of actual output.
+
+POWERSHELL COMMANDS
+
+Open PowerShell and paste:
+Set-Location -LiteralPath 'C:\Users\inah\Documents\ChatGPT\Solar US\tasks-today-tsa3'
+
+Refresh the demonstration tasks if needed (this updates the sample records):
+php artisan db:seed
+
+Show table setup and database evidence:
+php artisan migrate:status
+php artisan tasks:summary
+
+Show routes and tests:
+php artisan route:list --except-vendor
+php artisan test
+
+Start the server if it is not already running:
+php artisan serve --host=127.0.0.1 --port=8003
+
+Keep the server window open. Visit http://127.0.0.1:8003 in your browser.
+If port 8003 is already in use by this project, use the running server.
+Stop it using Ctrl+C in its PowerShell window.
+
+RECOMMENDED SCREENSHOTS AND CAPTIONS
+
+1. Welcome page: http://127.0.0.1:8003/
+   Caption: Welcome page displays only tasks scheduled for today's date.
+   Show the date card and all four tasks. Use a wide browser window.
+
+2. Task List: http://127.0.0.1:8003/tasks
+   Caption: Task List displays all eight tasks in ascending date order.
+   Capture all three dates. Use a full-page capture or two screenshots
+   if necessary; do not shrink text until it becomes unreadable.
+
+3. Profile: http://127.0.0.1:8003/profile
+   Caption: Profile page displays the single user record from the database.
+
+4. About: http://127.0.0.1:8003/about
+   Caption: About page identifies Inah Angela Gregorio as the developer.
+
+5. PowerShell migration status:
+   Caption: Laravel migrations create the users and tasks tables successfully.
+
+6. PowerShell tasks:summary:
+   Caption: The seeded database contains eight tasks across three dates,
+   four tasks for today, and exactly one user.
+   Run db:seed first if you are documenting on a different date.
+
+7. PowerShell tests:
+   Caption: Automated checks verify date filtering, ordering, database
+   constraints, record counts, profile retrieval, and navigation.
+
+ADDITIONAL CODE EVIDENCE IF REQUESTED
+- Both migration files: required columns, pending default, unique username.
+- DatabaseSeeder: relative dates, eight tasks, one user.
+- Task model and TaskController: forDate scope and date ordering.
+- User model and ProfileController: single-user retrieval.
+- routes/web.php and the shared Blade table partial.
+
+AFTER YOU UPLOAD AND DEPLOY
+8. GitHub repository page with the raw project files.
+9. Hosted application with its public URL visible.
+Your submission still needs the repository link and the hosted working link.
+
+Use Win+Shift+S to capture. Do not include .env, app keys, passwords,
+tokens, or private host settings in screenshots.
+
+GITHUB UPLOAD
+Open TSA3-GitHub-Upload and upload its CONTENTS, including hidden config
+files such as .gitignore and .env.example. Do not upload the local project's
+.env, vendor, database.sqlite, logs, or caches. Do not put the entire project
+inside an extra parent folder in the repository.
